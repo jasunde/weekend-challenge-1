@@ -1,3 +1,21 @@
 $(document).ready(function() {
-  console.log('ready');
+  var employeeList = [];
+
+  $('#employeeForm').on('submit', function (event) {
+    event.preventDefault();
+    $this = $(this);
+
+    var fields = $this.serializeArray(),
+        employee = {};
+
+    $this[0].reset();
+
+    fields.forEach(function (field){
+      employee[field.name] = field.value;
+    });
+
+    employeeList.push(employee);
+
+    console.log(employeeList);
+  });
 });
