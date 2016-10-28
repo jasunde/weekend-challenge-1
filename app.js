@@ -8,7 +8,7 @@ $(document).ready(function() {
     var fields = $this.serializeArray(),
         employee = {};
 
-    $this[0].reset();
+    this.reset();
 
     fields.forEach(function (field){
       employee[field.name] = field.value;
