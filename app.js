@@ -1,15 +1,23 @@
 $(document).ready(function() {
   var employeeList = [],
-      $employeeTable = $('#employeeTable');
+      $employeeTable = $('#employeeTable'),
+      $employeeForm = $('#employeeForm'),
+      $firstInput = $employeeForm.find('input').first();
 
-  $('#employeeForm').on('submit', function (event) {
+  // Focus on first input after DOM ready
+  $firstInput.focus();
+
+  $employeeForm.on('submit', function (event) {
     event.preventDefault();
-    $this = $(this);
 
-    var fields = $this.serializeArray(),
+    var $this    = $(this),
+        fields   = $this.serializeArray(),
         employee = {};
 
+    // Reset the form to default settings
     this.reset();
+    // Return focus to first input of form
+    $firstInput.focus();
 
     fields.forEach(function (field){
       employee[field.name] = field.value;
