@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var employeeList = [];
+  var employeeList = [],
+      $employeeTable = $('#employeeTable');
 
   $('#employeeForm').on('submit', function (event) {
     event.preventDefault();
@@ -16,6 +17,20 @@ $(document).ready(function() {
 
     employeeList.push(employee);
 
-    console.log(employeeList);
+    addEmployeeRow(employee, $employeeTable);
   });
 });
+
+function addEmployeeRow(employee, $table) {
+  var $tr = $('<tr></tr>').attr('id', 'e' + employee.idNumber);
+  addCell(employee.firstName, $tr);
+  addCell(employee.lastName, $tr);
+  addCell(employee.idNumber, $tr);
+  addCell(employee.jobTitle, $tr);
+  addCell(employee.annualSalary, $tr);
+  $table.append($tr);
+}
+
+function addCell(data, $row) {
+  $row.append($('<td>' + data + '</td>'));
+}
