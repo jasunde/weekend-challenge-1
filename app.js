@@ -2,7 +2,8 @@ $(document).ready(function() {
   var employeeList = [],
       $employeeTable = $('#employeeTable'),
       $employeeForm = $('#employeeForm'),
-      $firstInput = $employeeForm.find('input').first();
+      $firstInput = $employeeForm.find('input').first(),
+      monthlyPayroll;
 
   // Focus on first input after DOM ready
   $firstInput.focus();
@@ -26,6 +27,9 @@ $(document).ready(function() {
     employeeList.push(employee);
 
     addEmployeeRow(employee, $employeeTable);
+
+    monthlyPayroll = calculateMonthlyPayroll(employeeList);
+    $('#monthlyPayroll').text(monthlyPayroll.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
   });
 });
 
@@ -41,4 +45,10 @@ function addEmployeeRow(employee, $table) {
 
 function addCell(data, $row) {
   $row.append($('<td>' + data + '</td>'));
+}
+
+function calculateMonthlyPayroll(employees) {
+  return employees.reduce(function (total, employee) {
+    return total += employee.annualSalary / 12;
+  }, 0);
 }
