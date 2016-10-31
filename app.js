@@ -29,6 +29,9 @@ $(document).ready(function() {
       employee[field.name] = field.value;
     });
 
+    // Convert salary to Number
+    employee.annualSalary = parseFloat(employee.annualSalary);
+
     // Add unique identifier to employee
     employee.employeeCounter = 'e' + employeeCounter;
     employeeCounter++;
@@ -65,7 +68,7 @@ function addEmployeeRow(employee, $table) {
   addCell(employee.lastName, $tr);
   addCell(employee.idNumber, $tr);
   addCell(employee.jobTitle, $tr);
-  addCell(employee.annualSalary, $tr);
+  addCell(employee.annualSalary.toLocaleString('en-US', {style: 'currency', currency: 'USD'}), $tr);
   $tr.append('<td><button class="delete">Delete</button></td>');
   $table.append($tr);
 }
