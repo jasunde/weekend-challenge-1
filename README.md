@@ -13,7 +13,7 @@ The application should first have an input form that collects:
 - The Employee's Job Title
 - The Employee's Salary (Yearly)
 
-The form should have a submit button that
+The form should have a submit button that:
 - clears out the form and
 - stores the submitted information.
 
