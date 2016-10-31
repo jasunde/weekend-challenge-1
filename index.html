@@ -13,24 +13,26 @@
       <h1>Employee Form</h1>
       <form id="employeeForm">
         <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName"><br />
+        <input type="text" id="firstName" name="firstName" required><br />
 
         <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName"><br />
+        <input type="text" id="lastName" name="lastName" required><br />
 
         <label for="idNumber">ID Number</label>
-        <input type="text" id="idNumber" name="idNumber"><br />
+        <input type="number" id="idNumber" name="idNumber" required><br />
 
         <label for="jobTitle">Job Title</label>
-        <input type="text" id="jobTitle" name="jobTitle"><br />
+        <input type="text" id="jobTitle" name="jobTitle" required><br />
 
         <label for="annualSalary">Annual Salary</label>
-        <input type="text" id="annualSalary" name="annualSalary"><br />
+        <input type="number" id="annualSalary" name="annualSalary" required><br />
 
         <input type="submit">
       </form>
 
       <section>
+        <h2>Monthly Salary Expenditures: <span id="monthlyPayroll">$0.00</span></h2>
+
         <h2>Employee List</h2>
         <table id="employeeTable">
           <tr>
@@ -39,75 +41,10 @@
             <th>ID</th>
             <th>Title</th>
             <th>Annual Salary</th>
-            <th></th>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
-          </tr>
-          <tr>
-            <td>item1</td>
-            <td>item2</td>
-            <td>item3</td>
-            <td>item4</td>
-            <td>item5</td>
-            <td>item6</td>
+            <th>Delete</th>
           </tr>
         </table>
 
-        <h2>Monthly Salary Expenditures: <span id="monthlyPayroll"></span></h2>
       </section>
     </div>
 
