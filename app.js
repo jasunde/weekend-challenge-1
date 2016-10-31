@@ -33,7 +33,7 @@ $(document).ready(function() {
     employee.annualSalary = parseFloat(employee.annualSalary);
 
     // Add unique identifier to employee
-    employee.employeeCounter = 'e' + employeeCounter;
+    employee.employeeCounter =  employeeCounter;
     employeeCounter++;
 
     // Add employee object to employeeList
