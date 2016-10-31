@@ -16,12 +16,9 @@ body {
   padding: 1em;
 }
 
-form {
-  width: 100%;
-}
-
 label {
   display: inline-block;
+  font-size: 18px;
   text-align: right;
   width: 10em;
 }
@@ -29,7 +26,7 @@ label {
 input {
   border: 1px solid lightgray;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 2em;
   margin-bottom: .5em;
   padding: .5em;
@@ -41,7 +38,67 @@ input[type=submit]{
   border: 2px solid darkcyan;
   color: white;
   font-family: "Helvetica Neue", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 12.25em;
   -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table * {
+  /*border: 1px solid black;*/
+}
+
+th,
+td {
+  padding: .5em;
+}
+
+th,
+td {
+  border-right: 1px solid #bbb;
+}
+
+th {
+  border-color: white;
+  font-weight: normal;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+tr:first-child {
+  background-color: darkcyan;
+  color: white;
+}
+
+tr:nth-child(2n+3) {
+  background-color: #eee;
+}
+
+tr:last-child {
+  /*border-bottom: 1px solid #bbb;*/
+}
+
+.delete {
+  background-color: tomato;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: .5em;
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+#monthlyPayroll {
+  display: inline-block;
+  border: 2px solid darkcyan;
+  padding: .25em .5em;
 }
